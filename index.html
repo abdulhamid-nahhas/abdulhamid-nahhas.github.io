@@ -100,7 +100,7 @@ body{
 }
 .role{display:flex; flex-direction:column; align-items:center; white-space:nowrap; line-height:1.5}
 .role .ar{font-weight:500; font-size:1em}
-.role .en{font-weight:400; font-size:.78em; color:var(--muted); direction:ltr; letter-spacing:.01em}
+.role .en{font-weight:500; font-size:.92em; color:var(--ink); opacity:.8; direction:ltr; letter-spacing:.01em}
 .dot{flex:none; width:.42em; height:.42em; border-radius:50%; background:var(--copper)}
 @media (max-width:420px){ .hero{padding:28px 14px 22px} }
 .lang-btn{
@@ -201,8 +201,6 @@ a.tile:focus-visible,a.lk:focus-visible{outline:2px solid var(--copper); outline
   border:1px dashed var(--line); border-radius:14px; padding:14px;
 }
 </style>
-</head>
-<body>
 
 <main class="wrap">
   <header class="hero">
@@ -291,9 +289,14 @@ a.tile:focus-visible,a.lk:focus-visible{outline:2px solid var(--copper); outline
         <button type="button" class="copy-btn" data-copy="mailTxt" data-en="Copy">نسخ</button>
       </div>
       <div class="lk">
-        <span class="lk-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg></span>
-        <span class="lk-txt"><b data-en="Business Email">بريد الأعمال</b><small class="mail" dir="ltr" id="mailTxt2">Nahhas.store@gmail.com</small></span>
+        <span class="lk-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg></span>
+        <span class="lk-txt"><b data-en="Business Email">بريد الأعمال</b><small class="mail" dir="ltr" id="mailTxt2">Nahhas.ab@gmail.com</small></span>
         <button type="button" class="copy-btn" data-copy="mailTxt2" data-en="Copy">نسخ</button>
+      </div>
+      <div class="lk">
+        <span class="lk-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg></span>
+        <span class="lk-txt"><b data-en="Store Email">بريد المتجر</b><small class="mail" dir="ltr" id="mailTxt3">Nahhas.store@gmail.com</small></span>
+        <button type="button" class="copy-btn" data-copy="mailTxt3" data-en="Copy">نسخ</button>
       </div>
     </div>
   </section>
@@ -301,11 +304,11 @@ a.tile:focus-visible,a.lk:focus-visible{outline:2px solid var(--copper); outline
   <section class="sec" aria-labelledby="org-h">
     <h2 class="sec-h" id="org-h"><span data-en="My Establishment">مؤسستي</span></h2>
     <div class="links">
-      <div class="lk">
+      <a class="lk" href="https://mc.gov.sa/ar/eservices/Pages/ServiceDetails.aspx?sID=91" target="_blank" rel="noopener">
         <span class="lk-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
         <span class="lk-txt"><b data-en="Abdulhamid Zamel Nahhas Est.">مؤسسة عبدالحميد زامل نحاس</b><small><span data-en="Commercial Registration">السجل التجاري</span>: <span class="num" id="crTxt">7054505610</span></small></span>
-        <button type="button" class="copy-btn" data-copy="crTxt" data-en="Copy">نسخ</button>
-      </div>
+        <span class="lk-arrow" aria-hidden="true"></span>
+      </a>
     </div>
   </section>
 
@@ -362,7 +365,7 @@ a.tile:focus-visible,a.lk:focus-visible{outline:2px solid var(--copper); outline
     </div>
 
     <div class="group">
-      <p class="group-h"><span data-en="Business">الأعمال</span><span class="sep-s">·</span><span data-en="Nas Cart">عربة ناس</span></p>
+      <p class="group-h"><span data-en="Stores">المتاجر</span><span class="sep-s">·</span><span data-en="Nas Cart">عربة ناس</span></p>
       <div class="tiles">
         <a class="tile" href="https://www.tiktok.com/@nahhas.store" target="_blank" rel="noopener">
           <span class="tile-ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.3 4.5 5 4.8"/></svg></span>
