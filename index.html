@@ -192,6 +192,12 @@ a.lk:hover{border-color:var(--copper)}
   padding:14px 6px 12px; color:var(--ink); text-decoration:none; min-width:0;
 }
 a.tile:hover{border-color:var(--copper)}
+.tile.mail{padding:0; gap:0; overflow:hidden}
+.tile.mail:hover{border-color:var(--copper)}
+.tile-link{display:flex; flex-direction:column; align-items:center; gap:4px; width:100%; min-width:0; padding:14px 6px 8px; color:inherit; text-decoration:none}
+.tile-link:focus-visible{outline:2px solid var(--copper); outline-offset:-2px; border-radius:16px}
+.mail-u{font-size:11.5px; color:var(--muted); max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; unicode-bidi:plaintext}
+.copy-btn.mini{margin:0 0 11px; padding:3px 13px; font-size:12px}
 a.tile:focus-visible,a.lk:focus-visible{outline:2px solid var(--copper); outline-offset:2px}
 .tile.is-pending{opacity:.55}
 .tile-ic{width:50px; height:50px; border-radius:14px; display:grid; place-items:center; background:var(--bg); color:var(--copper); margin-bottom:2px}
@@ -284,20 +290,34 @@ a.tile:focus-visible,a.lk:focus-visible{outline:2px solid var(--copper); outline
         <span class="lk-txt"><b data-en="WhatsApp">واتساب</b><small data-en="Tap to start a chat">اضغط لبدء المحادثة</small></span>
         <span class="lk-arrow" aria-hidden="true"></span>
       </a>
-      <div class="lk">
-        <span class="lk-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span>
-        <span class="lk-txt"><b data-en="Personal Email">البريد الشخصي</b><small class="mail" dir="ltr" id="mailTxt">eng.hmedo@gmail.com</small></span>
-        <button type="button" class="copy-btn" data-copy="mailTxt" data-en="Copy">نسخ</button>
-      </div>
-      <div class="lk">
-        <span class="lk-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg></span>
-        <span class="lk-txt"><b data-en="Business Email">بريد الأعمال</b><small class="mail" dir="ltr" id="mailTxt2">Nahhas.ab@gmail.com</small></span>
-        <button type="button" class="copy-btn" data-copy="mailTxt2" data-en="Copy">نسخ</button>
-      </div>
-      <div class="lk">
-        <span class="lk-ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg></span>
-        <span class="lk-txt"><b data-en="Store Email">بريد المتجر</b><small class="mail" dir="ltr" id="mailTxt3">Nahhas.store@gmail.com</small></span>
-        <button type="button" class="copy-btn" data-copy="mailTxt3" data-en="Copy">نسخ</button>
+    </div>
+    <div class="group">
+      <p class="group-h"><span data-en="Email">البريد الإلكتروني</span></p>
+      <div class="tiles">
+        <div class="tile mail">
+          <a class="tile-link" href="mailto:eng.hmedo@gmail.com">
+            <span class="tile-ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span>
+            <b data-en="Personal">الشخصي</b>
+            <small class="mail-u" dir="ltr">eng.hmedo</small>
+          </a>
+          <button type="button" class="copy-btn mini" data-val="eng.hmedo@gmail.com" data-en="Copy">نسخ</button>
+        </div>
+        <div class="tile mail">
+          <a class="tile-link" href="mailto:Nahhas.ab@gmail.com">
+            <span class="tile-ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg></span>
+            <b data-en="Business">الأعمال</b>
+            <small class="mail-u" dir="ltr">Nahhas.ab</small>
+          </a>
+          <button type="button" class="copy-btn mini" data-val="Nahhas.ab@gmail.com" data-en="Copy">نسخ</button>
+        </div>
+        <div class="tile mail">
+          <a class="tile-link" href="mailto:Nahhas.store@gmail.com">
+            <span class="tile-ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg></span>
+            <b data-en="Store">المتجر</b>
+            <small class="mail-u" dir="ltr">Nahhas.store</small>
+          </a>
+          <button type="button" class="copy-btn mini" data-val="Nahhas.store@gmail.com" data-en="Copy">نسخ</button>
+        </div>
       </div>
     </div>
   </section>
@@ -423,19 +443,28 @@ a.tile:focus-visible,a.lk:focus-visible{outline:2px solid var(--copper); outline
       setLang(box.getAttribute('lang') === 'en' ? 'ar' : 'en');
     });
 
-    document.querySelectorAll('[data-copy]').forEach(function(cb){
-      var src = document.getElementById(cb.dataset.copy);
+    document.querySelectorAll('[data-copy],[data-val]').forEach(function(cb){
+      var src = cb.dataset.copy ? document.getElementById(cb.dataset.copy) : null;
+      var fixed = cb.dataset.val || null;
       function flash(){
         var en = box.getAttribute('lang') === 'en';
         cb.textContent = en ? 'Copied' : 'تم النسخ';
         setTimeout(function(){ cb.textContent = en ? cb.dataset.en : cb.dataset.ar; }, 1600);
       }
+      function textToCopy(){ return fixed || src.textContent.trim(); }
       function selectText(){
-        var r = document.createRange(); r.selectNodeContents(src);
-        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        if (src){
+          var r = document.createRange(); r.selectNodeContents(src);
+          var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        } else {
+          var t = document.createElement('textarea'); t.value = textToCopy();
+          t.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(t);
+          t.select(); try{ document.execCommand('copy'); flash(); }catch(e){}
+          document.body.removeChild(t);
+        }
       }
       cb.addEventListener('click', function(){
-        try{ navigator.clipboard.writeText(src.textContent.trim()).then(flash, selectText); }
+        try{ navigator.clipboard.writeText(textToCopy()).then(flash, selectText); }
         catch(e){ selectText(); }
       });
     });
